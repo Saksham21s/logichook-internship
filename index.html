@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Developer Portfolio</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/sass/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="assets/images/logo.png" alt="Logo" />
+          <div class="logo-text">
+            <span class="light-red">Frontend Developer</span>
+            <span class="dark-black">SAKSHAM PANDEY</span>
+          </div>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#pages">Pages</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact">
+        <button class="hire-me" >Hire Me</button>
+      </a>
+      </nav>
+    </header>
+    <!-- End of Header Section -->
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="home">
+        <div class="home-content">
+          <h2>Hello, World! I'm a</h2>
+          <h1>Front-End Developer</h1>
+          <p>I love to bring ideas into code</p>
+          <button class="btn red" onclick="downloadResume()">
+            Download Resume
+          </button>
+          <a href="#contact">
+          <button class="btn dark">
+            Contact Me
+          </button>
+        </a>
+          <div class="social-media">
+            <p>Find me on</p>
+            <div class="social-icons">
+              <a
+                href="https://www.linkedin.com/in/saksham-pandey21/"
+                target="_blank"
+                ><img src="assets/images/linkedin.jpg" alt="LinkedIn"
+              /></a>
+              <a href="https://leetcode.com/u/saksham21s/" target="_blank"
+                ><img src="assets/images/leetcode.png" alt="Leetcode"
+              /></a>
+              <a href="https://github.com/Saksham21s" target="_blank"
+                ><img src="assets/images/github.webp" alt="GitHub"
+              /></a>
+              <a href="https://twitter.com" target="_blank"
+                ><img src="assets/images/twitter.jpg" alt="Twitter"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="home-image-container">
+          <div class="home-image">
+            <img src="assets/images/hero-image.png" alt="Developer Image" />
+          </div>
+        </div>
+        <div class="home-dots">
+          <img src="assets/images/dots-img.png" alt="Dots" />
+        </div>
+      </section>
+      <!-- End of Hero Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about-me-container">
+        <div class="about-me-content">
+          <div class="about-me-dots">
+            <img src="./assets/images/dots-img.png" alt="Dots" />
+          </div>
+          <div class="image-section">
+            <div class="image-background"></div>
+            <div class="overlay"></div>
+          </div>
+          <div class="content-section">
+            <header>
+              <h2>
+                About me<span class="highlight">...</span>
+              </h2>
+              <h3>I'm a Professional<br />Web Developer</h3>
+            </header>
+            <p>
+              I am a Final Year B.Tech Student skilled in Frontend Web
+              Development, Python Programming, Version Control, Blockchain App
+              Development & SEO Optimization. <br><br>In my portfolio, I showcase
+              expertise in ReactJS for frontend Web development, AWS for
+              deployment and management, SEO for enhanced websites, and Git for
+              version control. With a focus on delivering efficient solutions
+              tailored to modern web development needs, my portfolio reflects a
+              comprehensive skill set and a track record of successful projects.
+            </p>
+            <p
+              style="
+                font-family: 'Pacifico', cursive;
+                font-size: 1.2em;
+                font-style: italic;
+                color: #333;
+              "
+            >
+              Saksham Pandey
+            </p>
+            <div style="display: flex; align-items: center;">
+              <button href="#" class="btn red">Know More</button>
+              <!-- Circular Play Button -->
+              <div style="width: 34px; height: 34px; background-color: black; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: 10px; cursor: pointer;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18" height="18">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- End of About Section -->
+
+     <!-- Skills Section -->
+<section id="skills-experience">
+  <div class="container">
+    <div class="section-title">
+      <h3>
+        Qualifications<span class="highlight">...</span>
+      </h3>
+      <h1 >Skills & Experience</h1>
+    </div>
+
+    <div class="content">
+      <!-- Education Section -->
+      <div class="category">
+        <h3>
+          Education<span class="highlight">...</span>
+        </h3>
+        <div class="edu-entry">
+          <h4>B.Tech CSE</h4>
+          <p class="exp-company">DBUU, Dehradun</p>
+          <p  id="low-color"> 2021 - 2025 | 8.7 SGPA</p>
+        </div>
+        <div class="edu-entry">
+          <h4>Intermediate</h4>
+          <p class="exp-company">D.A.V. Public School</p>
+          <p  id="low-color">2021 | 87.4 %</p>
+        </div>
+        <div class="edu-entry">
+          <h4>High School</h4>
+          <p class="exp-company">D.A.V. Public School</p>
+          <p id="low-color">2019 | 85 %</p>
+        </div>
+      </div>
+
+      <!-- Experience Section -->
+      <div class="category" >
+        <h3>
+          Experience<span class="highlight">...</span>
+        </h3>
+
+        <div class="exp-entry">
+          <img src="./assets/images/front1.png" alt="Frontend Developer Logo" class="exp-logo" />
+          <div class="exp-content">
+            <h4>Frontend Web Developer Intern</h4>
+            <p class="exp-company">Logichook</p>
+            <p  id="low-color">Feb 2025 - Present</p>
+          </div>
+        </div>
+
+        <div class="exp-entry">
+          <img src="./assets/images/front1.png" alt="Software Developer Logo" class="exp-logo" />
+          <div class="exp-content">
+            <h4>Software Development Intern</h4>
+            <p class="exp-company">Rablik</p>
+            <p  id="low-color">June 2024 - August 2024</p>
+          </div>
+        </div>
+
+        <div class="exp-entry">
+          <img src="./assets/images/front1.png" alt="Web Development Logo" class="exp-logo" />
+          <div class="exp-content">
+            <h4>Web Development Intern</h4>
+            <p class="exp-company">RM Cube IT Solution Limited</p>
+            <p  id="low-color">Jan 2024 - Feb 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <div class="category">
+        <h3>
+          My Skills<span class="highlight">...</span>
+        </h3>
+        <div class="skills-entry" >
+          <ul class="skills-list">
+            <li> <label class="custom-label">Java</label></li>
+            <li> <label class="custom-label">Python</label></li>
+            <li> <label class="custom-label">Data Structures and Algorithms</label></li>
+            <li> <label class="custom-label">Javascript</label></li>
+            <li> <label class="custom-label">ReactJs</label></li>
+            <li> <label class="custom-label">SQL</label></li>
+            <li> <label class="custom-label">jQuery</label></li>
+            <li> <label class="custom-label">Tailwind</label></li>
+            <li> <label class="custom-label">HTML + CSS</label></li>
+            <li> <label class="custom-label">Version Control</label></li>
+            <li> <label class="custom-label">Blockchain Basics</label></li>
+            <li> <label class="custom-label">AI & ML Basics</label></li>
+            <li><label class="custom-label">Bootstrap </label></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- End of Skills Section -->
+
+      <!-- Services Section -->
+      <section id="services" class="services-section">
+        <div class="container">
+          <div class="section-title">
+            <p>
+              Services<span class="highlight">...</span>
+            </p>
+            <h2>What I Offer</h2>
+          </div>
+          <div class="services-grid">
+            <div class="service-box">
+              <div class="service-icon"><i class="fas fa-code"></i></div>
+              <h3 style="text-align: left;">Frontend Development</h3>
+              <p>
+                I craft engaging and user-friendly web experiences with clean,
+                efficient code. I specialize in front-end development, turning
+                your vision into a dynamic and accessible online presence.
+              </p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+
+            <div class="service-box">
+              <div class="service-icon"><i class="fas fa-code"></i></div>
+              <h3 style="text-align: left;">Graphic Design</h3>
+              <p>
+                I optimize your website for search engines using proven SEO
+                techniques, including keyword research, on-page optimization,
+                and link building. I stay up-to-date with the latest SEO trends
+                and algorithm changes.
+              </p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+
+            <div class="service-box">
+              <div class="service-icon"><i class="fas fa-code"></i></div>
+              <h3 style="text-align: left;">Web Designing</h3>
+              <p>
+                I create visually stunning and intuitive website designs that
+                enhance user experience and effectively communicate your brand.
+                My designs are tailored to your specific needs, ensuring a
+                captivating online presence.
+              </p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="service-box">
+              <div class="service-icon"><i class="fas fa-code"></i></div>
+              <h3 style="text-align: left;">Wordpress Developing</h3>
+              <p>
+                I craft engaging and user-friendly web experiences with clean,
+                efficient code. I specialize in front-end development, turning
+                your vision into a dynamic and accessible online presence.
+              </p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="service-box">
+              <div class="service-icon"><i class="fas fa-code"></i></div>
+              <h3 style="text-align: left;">Photoshop</h3>
+              <p>
+                I craft engaging and user-friendly web experiences with clean,
+                efficient code. I specialize in front-end development, turning
+                your vision into a dynamic and accessible online presence.
+              </p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="service-box">
+              <div class="service-icon"><i class="fas fa-code"></i></div>
+              <h3 style="text-align: left;">Materelize Design</h3>
+              <p>
+                I craft engaging and user-friendly web experiences with clean,
+                efficient code. I specialize in front-end development, turning
+                your vision into a dynamic and accessible online presence.
+              </p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </div>
+          <div class="view-more">
+            <a href="#">View More</a>
+          </div>
+        </div>
+      </section>
+      <!-- End of Services Section -->
+
+      <!-- Portfolio Section -->
+      <section class="portfolio" id="projects">
+        <div class="container">
+            <div class="portfolio-header">
+                <div class="portfolio-text">
+                    <h3>Projects<span class="highlight">...</span></h3>
+                    <h2>Portfolio</h2>
+                    <p>Here are some of my recent projects that showcase my skills and experience in web development.</p>
+                </div>
+    
+                <div class="filter-buttons">
+                    <button class="filter-button active" data-filter="all">All Works</button>
+                    <button class="filter-button" data-filter="frontend">Frontend</button>
+                    <button class="filter-button" data-filter="full">Full Stack</button>
+                </div>
+            </div>
+    
+            <div class="projects">
+                <div class="project" data-type="full">
+                    <img src="./assets/images/Projects/festa.png" alt="Text To Handwritting Project">
+                    <h3>Text to Handwritting</h3>
+                    <p>Full Stack Project</p>
+                </div>
+    
+                <div class="project" data-type="full">
+                    <img src="./assets/images/Projects/medic.png" alt="Library Management System Project">
+                    <h3>Library Management System</h3>
+                    <p>Full Stack Project</p>
+                </div>
+    
+                <div class="project" data-type="frontend">
+                    <img src="./assets/images/Projects/festa.png" alt="Language Translator Project">
+                    <h3>Language Translator</h3>
+                    <p>Front-End Project</p>
+                </div>
+    
+                <div class="project" data-type="full">
+                    <img src="./assets/images/Projects/findah.png" alt="Food Delivery Project">
+                    <h3>Food Delivery App</h3>
+                    <p>Full Stack Project</p>
+                </div>
+    
+                <div class="project" data-type="frontend">
+                    <img src="./assets/images/Projects/medic.png" alt="Portfolio Website Project">
+                    <h3>Portfolio Website</h3>
+                    <p>Front-End Project</p>
+                </div>
+    
+                <div class="project" data-type="frontend">
+                    <img src="./assets/images/Projects/findah.png" alt="Weather App Project">
+                    <h3>Weather App</h3>
+                    <p>Front-End Project</p>
+                </div>
+            </div>
+    
+            <div class="view-more">
+                <a href="#">View More</a>
+            </div>
+        </div>
+    </section>
+    
+
+      <!-- Testimonial section starts Here -->
+      <section id="testimonials">
+      <div class="testimonial-section" >
+        <!-- Left Side: Image with Overlay -->
+        <div class="testimonial-image">
+          <img
+            src="./assets/images/testimonial-back.png"
+            alt="Background Shape"
+            class="bg-shape"
+          />
+          <img
+            src="./assets/images/testimonial-front.png"
+            alt="Client Image"
+            class="person-image"
+          />
+        </div>
+
+        <!-- Right Side: Testimonial Content -->
+        <div class="testimonial-content">
+          <span class="quote-icon">❝</span>
+          <p class="testimonial-heading">
+            Testimonials<span class="highlight">...</span>
+          </p>
+          <h2 class="client-reviews">Client Reviews</h2>
+          
+          <p class="testimonial-text">
+            “He is a highly skilled and dedicated developer. His expertise in
+            ReactJS, backend development was invaluable to our project. He's a
+            great communicator and a pleasure to work with”
+          </p>
+          <p class="client-name">Jhon Doe</p>
+          <p class="client-designation">Manager at <span>XYZ</span></p>
+        
+         <div class="slider">
+          <div class="flex-container">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar active"></div>
+            <div class="bar"></div>
+          </div>          
+          </div>
+        </div>
+      </div>     
+</section>
+      <!-- Testimonial section ends Here -->
+
+      <!-- Blogs section starts Here -->
+<section id="pages">
+      <div class="blog-section" >
+        <p>
+          Blog<span class="highlight">...</span>
+          
+        </p>
+        <h2>Latest News</h2>
+        <div class="blog-container">
+          <div class="blog-item">
+            <img src="./assets/images/ai-blog.jpg" alt="AI Blog" />
+            <h5>Jan 13, 2025</h5>
+            <h3 >A Blog on AI</h3>
+            <p>
+              Artificial intelligence is the simulation of human intelligence
+              processes by computer systems, enabling them to learn, reason, and
+              problem-solve. .
+            </p>
+          </div>
+          <div class="blog-item">
+            <img src="./assets/images/deepchat.png" alt="DeepSeek Vs Chatgpt" />
+            <h5>December 25, 2024</h5>
+            <h3 >DeepSeek vs ChatGPT</h3>
+            <p>
+              DeepSeek and ChatGPT are both prominent large language models
+              (LLMs), yet they differ in several key aspects. 1 A major
+              distinction lies in cost.
+            </p>
+          </div>
+          <div class="blog-item">
+            <img src="./assets/images/aws.jpg" alt="AWS Blog" />
+            <h5>October 11, 2024</h5>
+            <h3 >AWS and its Advantages</h3>
+            <p>
+              Amazon Web Services (AWS) is the world's most comprehensive and
+              broadly adopted cloud platform, offering over 200 fully featured.
+            </p>
+          </div>
+        </div>
+        <button class="view-more1">View More</button>
+      </div>
+    </section>
+
+      <!-- Blogs section ends Here -->
+
+      <!-- Contact section starts Here -->
+      <section class="contact-section" id="contact">
+        <h3 class="contact-heading">
+          Contact<span class="highlight">...</span>
+        </h3>
+        <h2 class="contact-title">Request for <strong>Quote</strong></h2>
+
+        <div class="contact-container">
+          <form class="contact-form">
+            <div class="input-group">
+              <input type="text" placeholder="Your Full Name" required />
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="input-group">
+              <input type="text" placeholder="Subject" required />
+              <input type="tel" placeholder="Phone Number" maxlength="10" required />
+            </div>
+            <textarea placeholder="Message" rows="4" required></textarea>
+            <button id="btn1" type="submit">Send Message</button>
+          </form>
+
+          <!-- Right: Embedded Map -->
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.9378215849742!2d78.04182!3d30.324286400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929ea85275763%3A0xdc5852f79736305f!2sClock%20Tower!5e0!3m2!1sen!2sin!4v1738751414508!5m2!1sen!2sin"
+              width="450"
+              height="600"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <!-- Contact section ends Here -->
+    </main>
+     <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Dotted Pattern -->
+    <div class="dots-pattern"></div>
+
+    <!-- Footer Content -->
+    <div class="footer-content">
+      <h2>Let's Say Hi</h2>
+      <p>saksham4200@gmail.com</p>
+      <p >+91-8787050004</p>
+
+      <!-- Social Icons -->
+      <div class="social-icons" style="justify-content: center">
+        <a href="https://www.linkedin.com/in/saksham-pandey21/" target="_blank"><img src="assets/images/linkedin.jpg" alt="LinkedIn" /></a>
+        <a href="https://leetcode.com/u/saksham21s/" target="_blank"><img src="assets/images/leetcode.png" alt="Leetcode" /></a>
+        <a href="https://github.com/Saksham21s" target="_blank"><img src="assets/images/github.webp" alt="GitHub" /></a>
+        <a href="https://twitter.com" target="_blank"><img src="assets/images/twitter.jpg" alt="Twitter" /></a>
+      </div>
+    </div>
+  </div>
+<br>
+  <!-- Copyright at the very bottom -->
+  <p class="footer-bottom">
+    &copy; 2025 Designed by Mr. Ved Prakash. All Rights are Reserved.
+  </p>  
+</footer>
+
+   <!-- Scroll to Top Button -->
+<button id="scrollTopBtn" title="Go to top">↑</button>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
