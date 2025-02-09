@@ -40,7 +40,7 @@ nav .logo {
   justify-content: center;
   flex-direction: row;
   gap: 10px;
-  margin-left: 12px;
+  margin-left: 20px;
 }
 nav .logo img {
   height: 50px;
@@ -126,9 +126,47 @@ nav.active .menu-toggle div:nth-child(2) {
 nav.active .menu-toggle div:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   nav {
-    padding: 15px 100px;
+    padding: 12px 15px;
+  }
+  nav .menu-toggle {
+    display: flex;
+  }
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  nav.active .nav-links {
+    display: flex;
+  }
+  nav .hire-me {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    padding: 15px 80px;
+  }
+  nav .menu-toggle {
+    display: none;
+  }
+  nav .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    gap: 25px;
+  }
+  nav .hire-me {
+    display: inline-block;
+  }
+}
+@media (min-width: 1025px) {
+  nav {
+    padding: 15px 150px;
   }
   nav .menu-toggle {
     display: none;
@@ -144,18 +182,13 @@ nav.active .menu-toggle div:nth-child(3) {
     display: inline-block;
   }
 }
-@media (min-width: 1200px) {
-  nav {
-    padding: 15px 170px;
-  }
-}
 
 /*----------------------------- Home section starts Here-----------------------------*/
 .home {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5% 10%;
+  padding: 5%;
   background: rgb(245, 245, 245);
   box-sizing: border-box;
   flex-wrap: wrap;
@@ -165,25 +198,22 @@ nav.active .menu-toggle div:nth-child(3) {
 .home .home-content {
   flex: 1;
   text-align: left;
-  margin: 1em;
   width: 50%;
+  padding-left: 100px;
 }
 .home .home-content h1 {
   font-family: "Rockwell", serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 50px;
-  margin-left: 0.4em;
 }
 .home .home-content h2 {
   font-family: "Rockwell", serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 28px;
-  margin-left: 19px;
 }
 .home .home-content p {
-  margin-left: 18px;
   font-family: "Roboto", sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -197,7 +227,7 @@ nav.active .menu-toggle div:nth-child(3) {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
-  margin: 10px 15px;
+  margin: 10px 0;
 }
 .home .home-content .btn:hover {
   background: linear-gradient(135deg, #ff3d3d, #ff1a1a);
@@ -224,8 +254,9 @@ nav.active .menu-toggle div:nth-child(3) {
 .home .home-image-container .home-image {
   text-align: center;
   margin: 20px;
-  width: 362;
-  height: 572;
+  width: 100%;
+  max-width: 362px;
+  height: auto;
 }
 .home .home-image-container .home-image img {
   width: 100%;
@@ -247,13 +278,60 @@ nav.active .menu-toggle div:nth-child(3) {
   max-height: 300px;
   height: auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .home {
-    flex-direction: column;
+    flex-direction: row;
     padding: 5%;
+    margin-bottom: 10%;
   }
   .home .home-content {
     width: 90%;
+    padding-left: 100px;
+    text-align: left;
+  }
+  .home .home-content h1 {
+    font-size: 2rem;
+  }
+  .home .home-content p {
+    font-size: 1.3rem;
+  }
+  .home .home-image-container {
+    width: 70%;
+    order: -1;
+    margin: 20px auto;
+  }
+  .home .home-image-container .home-image {
+    max-width: 320px;
+    max-height: 380px;
+  }
+  .home .home-dots {
+    display: none;
+  }
+  .home .social-media .social-icons {
+    justify-content: flex-start;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+  }
+  .home .home-image-container {
+    width: 80%;
+    order: -1;
+    margin: 20px auto;
+  }
+  .home .home-image-container .home-image {
+    max-width: 280px;
+    max-height: 340px;
+  }
+  .home .home-content {
+    width: 90%;
+    order: 1;
+    padding-left: 0;
     text-align: center;
   }
   .home .home-content h1 {
@@ -262,13 +340,27 @@ nav.active .menu-toggle div:nth-child(3) {
   .home .home-content p {
     font-size: 1.2rem;
   }
+}
+@media (max-width: 480px) {
   .home .home-image-container {
-    width: 90%;
+    width: 85%;
     order: -1;
-    margin: 20px auto;
+    margin: 15px;
   }
-  .home .home-dots {
-    display: none;
+  .home .home-image-container .home-image {
+    max-width: 260px;
+    max-height: 320px;
+  }
+  .home .home-content {
+    width: 90%;
+    order: 1;
+    text-align: center;
+  }
+  .home .home-content h1 {
+    font-size: 1.8rem;
+  }
+  .home .home-content p {
+    font-size: 1rem;
   }
 }
 
@@ -285,7 +377,7 @@ nav.active .menu-toggle div:nth-child(3) {
 .social-media .social-icons {
   display: flex;
   justify-content: left;
-  margin-left: 1em;
+  margin-left: 0px;
   gap: 15px;
 }
 .social-media .social-icons a img {
@@ -297,6 +389,11 @@ nav.active .menu-toggle div:nth-child(3) {
 .social-media .social-icons a img:hover {
   transform: scale(1.2);
 }
+@media (max-width: 1024px) {
+  .social-media .social-icons {
+    margin-left: 100px;
+  }
+}
 @media (max-width: 768px) {
   .social-media {
     margin-top: 20px;
@@ -305,7 +402,8 @@ nav.active .menu-toggle div:nth-child(3) {
     text-align: center;
   }
   .social-media .social-icons {
-    justify-content: center;
+    text-align: center;
+    padding-left: 85px;
   }
 }
 
@@ -317,7 +415,7 @@ nav.active .menu-toggle div:nth-child(3) {
   justify-content: center;
   align-items: center;
   background-color: #f9f9f9;
-  padding: 30px 0;
+  padding: 30px 50px;
   position: relative;
 }
 
@@ -343,7 +441,6 @@ nav.active .menu-toggle div:nth-child(3) {
   align-items: center;
   z-index: 1;
 }
-
 .about-me-dots img {
   max-height: 300px;
   height: auto;
@@ -362,12 +459,10 @@ nav.active .menu-toggle div:nth-child(3) {
 .image-background {
   width: 439px;
   height: 378px;
-  background-image: url("/assets/images/office-man.png");
+  background-image: url("/assets/images/office-man.webp");
   background-size: cover;
   background-position: center;
   border-radius: 5px;
-  gap: 0px;
-  opacity: 0px;
 }
 
 .overlay {
@@ -376,10 +471,9 @@ nav.active .menu-toggle div:nth-child(3) {
   position: absolute;
   top: -10px;
   left: -35px;
-  background-image: url("/assets/images/man-front.jpg");
+  background-image: url("/assets/images/man-front.webp");
   background-size: cover;
   background-position: 25%;
-  opacity: 1;
   -webkit-clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0 90%);
           clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0 90%);
 }
@@ -391,7 +485,6 @@ nav.active .menu-toggle div:nth-child(3) {
   box-sizing: border-box;
   border-radius: 8px;
 }
-
 .content-section header h2 {
   font-family: "Rockwell", serif;
   font-size: 24px;
@@ -399,7 +492,6 @@ nav.active .menu-toggle div:nth-child(3) {
   line-height: 28px;
   text-align: left;
 }
-
 .content-section header h3 {
   font-family: "Rockwell", serif;
   font-size: 48px;
@@ -408,7 +500,6 @@ nav.active .menu-toggle div:nth-child(3) {
   margin-top: 10px;
   text-align: left;
 }
-
 .content-section p {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -416,7 +507,6 @@ nav.active .menu-toggle div:nth-child(3) {
   line-height: 24px;
   text-align: left;
 }
-
 .content-section .btn {
   background: rgb(239, 109, 82);
   color: white;
@@ -429,7 +519,6 @@ nav.active .menu-toggle div:nth-child(3) {
 .content-section .btn:hover {
   background: linear-gradient(135deg, #ff3d3d, #ff1a1a);
 }
-
 .content-section .btn:hover {
   transition: all 0.3s ease-in-out;
 }
@@ -441,46 +530,58 @@ nav.active .menu-toggle div:nth-child(3) {
 @media (max-width: 1024px) {
   .about-me-content {
     width: 95%;
-  }
-  .image-section {
-    width: 50%;
-    max-width: 100%;
-    height: auto;
-  }
-}
-@media (max-width: 768px) {
-  .about-me-content {
     flex-direction: column;
     align-items: center;
-    width: 95%;
+    padding: 20px;
   }
   .image-section {
-    display: none !important;
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 20px auto;
   }
   .about-me-dots {
     display: none;
   }
-  .image-background {
+  .content-section {
     width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
+    max-width: 700px;
+    padding: 20px;
   }
-  .content-section header h2 {
+}
+@media (max-width: 768px) {
+  .image-section {
+    display: none !important;
+  }
+  .about-me-container {
+    padding: 10px;
+  }
+  .about-me-container .content-section {
+    text-align: justify;
+    padding: 20px;
+    max-width: 90%;
+  }
+  .about-me-container .content-section header h2 {
     font-size: 1.4em;
   }
-  .content-section header h3 {
+  .about-me-container .content-section header h3 {
     font-size: 1.8em;
   }
-  .content-section p {
+  .about-me-container .content-section p {
     font-size: 1em;
   }
-  .content-section .btn {
+  .about-me-container .content-section .btn {
     padding: 15px;
     font-size: 1.2em;
   }
 }
 @media (max-width: 480px) {
+  .content-section {
+    padding: 15px;
+    max-width: 90%;
+  }
   .content-section header h2 {
     font-size: 1.3em;
   }
@@ -506,6 +607,7 @@ nav.active .menu-toggle div:nth-child(3) {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  padding-left: 50px;
   box-sizing: border-box;
 }
 
@@ -731,11 +833,11 @@ nav.active .menu-toggle div:nth-child(3) {
 .services-section .services-grid .service-box .service-icon img {
   position: absolute;
   top: -30px;
-  left: 30%;
+  left: 20%;
   transform: translateX(-50%);
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -987,7 +1089,7 @@ nav.active .menu-toggle div:nth-child(3) {
 }
 @media (max-width: 1024px) {
   .testimonial-section {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
     padding: 20px;
@@ -1005,10 +1107,15 @@ nav.active .menu-toggle div:nth-child(3) {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 1024px) {
+  .testimonial-image {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
 @media (max-width: 768px) {
   .testimonial-image {
-    width: 100%;
-    min-width: 100%;
+    width: 45%;
     margin-bottom: 20px;
   }
 }
@@ -1051,9 +1158,15 @@ nav.active .menu-toggle div:nth-child(3) {
   min-width: 300px;
   padding: 20px;
 }
+@media screen and (max-width: 768px) {
+  .testimonial-content {
+    margin: auto;
+  }
+}
 @media (max-width: 1024px) {
   .testimonial-content {
     text-align: left;
+    width: 50%;
   }
 }
 
@@ -1122,7 +1235,7 @@ nav.active .menu-toggle div:nth-child(3) {
 .blog-section .blog-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 .blog-section .blog-item {
@@ -1191,10 +1304,14 @@ nav.active .menu-toggle div:nth-child(3) {
     padding: 40px;
   }
   .blog-section .blog-container {
-    gap: 15px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 20px;
   }
   .blog-section .blog-item {
-    max-width: 320px;
+    width: 32%;
+    max-width: 32%;
+    padding: 15px;
   }
 }
 @media (max-width: 768px) {
@@ -1337,14 +1454,16 @@ nav.active .menu-toggle div:nth-child(3) {
 }
 @media (max-width: 1024px) {
   .contact-section .contact-container {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     gap: 20px;
   }
   .contact-section .contact-form {
-    width: 90%;
+    width: 48%;
     max-width: 500px;
-    text-align: center;
+    text-align: left;
+  }
+  .contact-section .contact-map {
+    width: 48%;
   }
   .contact-section .contact-map iframe {
     height: 320px;
@@ -1354,8 +1473,17 @@ nav.active .menu-toggle div:nth-child(3) {
   .contact-section {
     padding: 30px 15px;
   }
+  .contact-section .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
   .contact-section .contact-form {
     width: 95%;
+    text-align: center;
+  }
+  .contact-section .contact-map {
+    width: 100%;
   }
   .contact-section .contact-map iframe {
     height: 300px;
@@ -1396,13 +1524,11 @@ nav.active .menu-toggle div:nth-child(3) {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-height: 300px;
   position: relative;
 }
 .footer .footer-container {
   max-width: 1100px;
   width: 100%;
-  margin: auto;
   text-align: center;
 }
 .footer .dots-pattern {
@@ -1463,6 +1589,9 @@ nav.active .menu-toggle div:nth-child(3) {
   }
 }
 @media (max-width: 480px) {
+  .footer .dots-pattern {
+    display: none;
+  }
   .footer .footer-content h2 {
     font-size: 24px;
   }
