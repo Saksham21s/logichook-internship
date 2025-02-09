@@ -606,48 +606,49 @@ nav {
   }
 }
 
-// ✅ **Tablets - Image Center & Content Padding Fixed**
+// ✅ **Tablet View - Image and Content in Same Row**
 @media (max-width: 1024px) {
   .about-me-content {
     width: 95%;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px; 
+    flex-direction: row;
+    gap: 30px;
+    padding: 20px;
+    justify-content: center;
   }
 
   .image-section {
-    width: 80%; 
-    max-width: 500px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 20px auto; 
+    width: 40%; 
+    max-width: 380px; 
+    margin-left: 0;
+    margin-top: 0; 
+  }
+
+  .content-section {
+    width: 55%; 
+    padding: 20px;
   }
 
   .about-me-dots {
     display: none;
   }
-
-  .content-section {
-    width: 100%;
-    max-width: 700px;
-    padding: 20px;
-  }
 }
 
-// ✅ **Mobile - Image Hidden & Proper Padding**
+// ✅ **Mobile View - Stack Image Above Content**
 @media (max-width: 768px) {
   .image-section {
-    display: none !important;
+    width: 100% !important;
+    margin: 0 auto;
   }
 
-  .about-me-container{
+  .about-me-container {
     padding: 10px;
- 
+  }
+
   .content-section {
     text-align: justify;
     padding: 20px;
     max-width: 90%; 
+
     header {
       h2 {
         font-size: 1.4em;
@@ -667,12 +668,11 @@ nav {
       font-size: 1.2em;
     }
   }
-  }
 }
 
 @media (max-width: 480px) {
   .content-section {
-    padding: 15px; // Ensuring spacing on small screens
+    padding: 15px; 
     max-width: 90%;
 
     header {
@@ -695,7 +695,6 @@ nav {
     }
   }
 }
-
 
 /*----------------------------- Skills section starts Here---------------------------------------------------------*/
 #skills-experience {
