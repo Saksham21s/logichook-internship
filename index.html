@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Developer Portfolio</title>
     <link rel="shortcut icon" href="./assets/images/logo.webp" type="image/x-icon"/>
-    <link rel="stylesheet" href="./assets/css/sass/style.css" />
+    <link rel="stylesheet" href="./assets/css/sass/style.min.css" />
     <link  href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"rel="stylesheet"/>
   </head>
   <body>
-    <!-- Header Section -->
+    <!-- Header Section  Starts Here -->
     <header>
       <nav>
         <div class="logo">
@@ -43,48 +43,43 @@
     <main>
       <!-- Home  Section Starts Here  -->
       <section id="home" class="home">
-        <div class="home-content">
-          <h2>Hello, World! I'm a</h2>
-          <h1>Front-End Developer</h1>
-          <p>I love to bring ideas into code</p>
-          <button class="btn red" onclick="downloadResume()">
-            Download Resume
-          </button>
-          <a href="#contact">
-          <button class="btn dark">
-            Contact Me
-          </button>
-        </a>
-          <div class="social-media">
-            <p>Find me on</p>
-            <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/saksham-pandey21/"
-                target="_blank"
-                ><img src="assets/images/linkedin.webp" alt="LinkedIn"
-              /></a>
-              <a href="https://leetcode.com/u/saksham21s/" target="_blank"
-                ><img src="assets/images/leetcode.webp" alt="Leetcode"
-              /></a>
-              <a href="https://github.com/Saksham21s" target="_blank"
-                ><img src="assets/images/github.webp" alt="GitHub"
-              /></a>
-              <a href="https://twitter.com" target="_blank"
-                ><img src="assets/images/twitter.webp" alt="Twitter"
-              /></a>
+        <div class="home-wrapper">
+          <!-- Left Content Section -->
+          <div class="home-content">
+            <h2>Hello, World! I'm a</h2>
+            <h1>Front-End Developer |</h1>
+            <p>I love to bring ideas into code</p>
+            <div class="home-buttons">
+              <button class="btn red" onclick="downloadResume()">Download Resume</button>
+              <a href="#contact">
+                <button class="btn dark">Contact Me</button>
+              </a>
+            </div>
+            <div class="social-media">
+              <p>Find me on</p>
+              <div class="social-icons">
+                <a href="https://www.linkedin.com/in/saksham-pandey21/" target="_blank"><img src="assets/images/linkedin.webp" alt="LinkedIn" /></a>
+                <a href="https://leetcode.com/u/saksham21s/" target="_blank"><img src="assets/images/leetcode.webp" alt="Leetcode" /></a>
+                <a href="https://github.com/Saksham21s" target="_blank"><img src="assets/images/github.webp" alt="GitHub" /></a>
+                <a href="https://twitter.com" target="_blank"><img src="assets/images/twitter.webp" alt="Twitter" /></a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Right Image Section -->
+          <div class="home-image-container">
+            <div class="home-image">
+              <img src="assets/images/hero-image.webp" alt="Developer Image" />
             </div>
           </div>
         </div>
-        <div class="home-image-container">
-          <div class="home-image">
-            <img src="assets/images/hero-image.webp" alt="Developer Image" />
-          </div>
-        </div>
+      
         <div class="home-dots">
           <img src="assets/images/dots-img.webp" alt="Dots" />
         </div>
       </section>
-      <!-- End of Hero Section -->
+      
+      <!-- End of Home Section -->
 
       <!-- About Section -->
       <section id="about" class="about-me-container">
@@ -113,18 +108,9 @@
               tailored to modern web development needs, my portfolio reflects a
               comprehensive skill set and a track record of successful projects.
             </p>
-            <p
-              style="
-                font-family: 'Pacifico', cursive;
-                font-size: 1.2em;
-                font-style: italic;
-                color: #333;
-              "
-            >
-              Saksham Pandey
-            </p>
+            <p style="font-family: 'Pacifico', cursive; font-size: 1.2em; font-style: italic; color: #333;"> Saksham Pandey</p>
             <div style="display: flex; align-items: center;">
-              <button href="#" class="btn red">Know More</button>
+              <button href="javascript:void()" class="btn red">Know More</button>
               <!-- Circular Play Button -->
               <div style="width: 34px; height: 34px; background-color: black; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: 10px; cursor: pointer;">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18" height="18">
@@ -132,7 +118,6 @@
                 </svg>
               </div>
             </div>
-            
           </div>
         </div>
       </section>
@@ -173,9 +158,7 @@
 
       <!-- Experience Section -->
       <div class="category" >
-        <h3>
-          Experience<span class="highlight">...</span>
-        </h3>
+        <h3>Experience<span class="highlight">...</span></h3>
 
         <div class="exp-entry">
           <img src="./assets/images/front1.webp" alt="Frontend Developer Logo" class="exp-logo" />
@@ -207,9 +190,7 @@
 
       <!-- Skills Section -->
       <div class="category">
-        <h3>
-          My Skills<span class="highlight">...</span>
-        </h3>
+        <h3> My Skills<span class="highlight">...</span></h3>
         <div class="skills-entry" >
           <ul class="skills-list">
             <li> <label class="custom-label">Java</label></li>
@@ -237,9 +218,7 @@
       <section id="services" class="services-section">
         <div class="container">
           <div class="section-title">
-            <p>
-              Services<span class="highlight">...</span>
-            </p>
+            <p>Services<span class="highlight">...</span></p>
             <h2>What I Offer</h2>
           </div>
           <div class="services-grid">
@@ -248,12 +227,10 @@
                 <img src="assets/images/service-logo.webp" alt="Frontend Development" />
               </div>
               <h3 style="text-align: left;">Frontend Development</h3>
-              <p>
-                I craft engaging and user-friendly web experiences with clean,
+              <p>I craft engaging and user-friendly web experiences with clean,
                 efficient code. I specialize in front-end development, turning
-                your vision into a dynamic and accessible online presence.
-              </p>
-              <a href="#" class="read-more">Read More</a>
+                your vision into a dynamic and accessible online presence.</p>
+              <a href="javascript:void()" class="read-more">Read More</a>
             </div>
       
             <div class="service-box">
@@ -261,13 +238,10 @@
                 <img src="assets/images/service-logo.webp" alt="Graphic Design" />
               </div>
               <h3 style="text-align: left;">Graphic Design</h3>
-              <p>
-                I optimize your website for search engines using proven SEO
+              <p>I optimize your website for search engines using proven SEO
                 techniques, including keyword research, on-page optimization,
-                and link building. I stay up-to-date with the latest SEO trends
-                and algorithm changes.
-              </p>
-              <a href="#" class="read-more">Read More</a>
+                and link building. I stay up-to-date with the latest SEO trends.</p>
+              <a href="javascript:void()" class="read-more">Read More</a>
             </div>
       
             <div class="service-box">
@@ -275,13 +249,11 @@
                 <img src="assets/images/service-logo.webp" alt="Web Designing" />
               </div>
               <h3 style="text-align: left;">Web Designing</h3>
-              <p>
-                I create visually stunning and intuitive website designs that
+              <p>I create visually stunning and intuitive website designs that
                 enhance user experience and effectively communicate your brand.
                 My designs are tailored to your specific needs, ensuring a
-                captivating online presence.
-              </p>
-              <a href="#" class="read-more">Read More</a>
+                captivating online presence.</p>
+              <a href="javascript:void()" class="read-more">Read More</a>
             </div>
       
             <div class="service-box">
@@ -289,12 +261,10 @@
                 <img src="assets/images/service-logo.webp" alt="Wordpress Developing" />
               </div>
               <h3 style="text-align: left;">Wordpress Developing</h3>
-              <p>
-                I craft engaging and user-friendly web experiences with clean,
+              <p>I craft engaging and user-friendly web experiences with clean,
                 efficient code. I specialize in front-end development, turning
-                your vision into a dynamic and accessible online presence.
-              </p>
-              <a href="#" class="read-more">Read More</a>
+                your vision into a dynamic and accessible online presence.</p>
+              <a href="javascript:void()" class="read-more">Read More</a>
             </div>
       
             <div class="service-box">
@@ -302,12 +272,10 @@
                 <img src="assets/images/service-logo.webp" alt="Photoshop" />
               </div>
               <h3 style="text-align: left;">Photoshop</h3>
-              <p>
-                I craft engaging and user-friendly web experiences with clean,
+              <p>I craft engaging and user-friendly web experiences with clean,
                 efficient code. I specialize in front-end development, turning
-                your vision into a dynamic and accessible online presence.
-              </p>
-              <a href="#" class="read-more">Read More</a>
+                your vision into a dynamic and accessible online presence.</p>
+              <a href="javascript:void()" class="read-more">Read More</a>
             </div>
       
             <div class="service-box">
@@ -315,23 +283,21 @@
                 <img src="assets/images/service-logo.webp" alt="Materialize Design" />
               </div>
               <h3 style="text-align: left;">Materialize Design</h3>
-              <p>
-                I craft engaging and user-friendly web experiences with clean,
+              <p>I craft engaging and user-friendly web experiences with clean,
                 efficient code. I specialize in front-end development, turning
-                your vision into a dynamic and accessible online presence.
-              </p>
-              <a href="#" class="read-more">Read More</a>
+                your vision into a dynamic and accessible online presence.</p>
+              <a href="javascript:void()" class="read-more">Read More</a>
             </div>
           </div>
           <div class="view-more">
-            <a href="#">View More</a>
+            <a href="javascript:void()">View More</a>
           </div>
         </div>
       </section>
       
       <!-- End of Services Section -->
 
-      <!-- Portfolio Section -->
+      <!-- Portfolio Section Starts Here -->
       <section class="portfolio" id="projects">
         <div class="container">
             <div class="portfolio-header">
@@ -387,7 +353,7 @@
             </div>
     
             <div class="view-more">
-                <a href="#">View More</a>
+                <a href="javascript:void()">View More</a>
             </div>
         </div>
     </section>
@@ -398,16 +364,8 @@
       <div class="testimonial-section" >
         <!-- Left Side: Image with Overlay -->
         <div class="testimonial-image">
-          <img
-            src="./assets/images/testimonial-back.webp"
-            alt="Background Shape"
-            class="bg-shape"
-          />
-          <img
-            src="./assets/images/testimonial-front.webp"
-            alt="Client Image"
-            class="person-image"
-          />
+          <img src="./assets/images/testimonial-back.webp" alt="Background Shape" class="bg-shape" />
+          <img src="./assets/images/testimonial-front.webp" alt="Client Image" class="person-image"/>
         </div>
 
         <!-- Right Side: Testimonial Content -->
@@ -426,7 +384,7 @@
           <p class="client-name">Jhon Doe</p>
           <p class="client-designation">Manager at <span>XYZ</span></p>
         
-         <div class="slider">
+         <!-- <div class="slider">
           <div class="flex-container">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -434,7 +392,7 @@
             <div class="bar active"></div>
             <div class="bar"></div>
           </div>          
-          </div>
+          </div> -->
         </div>
       </div>     
 </section>
@@ -460,7 +418,7 @@
             </p>
           </div>
           <div class="blog-item">
-            <img src="./assets/images/deepchat.webp" alt="DeepSeek Vs Chatgpt" />
+            <img src="./assets/images/ai-blog.webp" alt="DeepSeek Vs Chatgpt" />
             <h5>December 25, 2024</h5>
             <h3 >DeepSeek vs ChatGPT</h3>
             <p>
@@ -470,7 +428,7 @@
             </p>
           </div>
           <div class="blog-item">
-            <img src="./assets/images/aws.webp" alt="AWS Blog" />
+            <img src="./assets/images/ai-blog.webp" alt="AWS Blog" />
             <h5>October 11, 2024</h5>
             <h3 >AWS and its Advantages</h3>
             <p>
@@ -510,13 +468,7 @@
           <div class="contact-map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.9378215849742!2d78.04182!3d30.324286400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929ea85275763%3A0xdc5852f79736305f!2sClock%20Tower!5e0!3m2!1sen!2sin!4v1738751414508!5m2!1sen!2sin"
-              width="450"
-              height="600"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+              width="450"height="600" style="border: 0"allowfullscreen=""loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>

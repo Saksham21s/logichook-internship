@@ -11,7 +11,7 @@ $text-secondary: #bcb8b8;
 $hover-gradient: linear-gradient(135deg, #ff3d3d, #ff1a1a); 
 $font-heading: 'Rockwell', serif; 
 $font-body: 'Roboto', sans-serif; 
-$button-padding: 10px 16px;
+$button-padding: 12px 16px;
 $logo-size: 50px; 
 $border-radius: 5px; 
 $bg-opacity: 0.6;
@@ -68,10 +68,11 @@ main{
 /*----------------------------- Header Navbar section starts Here-----------------------------*/
 nav {
   @include flex-center;
-  justify-content: space-between;
+  justify-content: left;
   padding: 12px 20px;
   background-color: $light-grey-bg;
   position: fixed;
+  gap: 50px;
   top: 0;
   left: 0;
   width: 100%;
@@ -81,7 +82,7 @@ nav {
   .logo {
     @include flex-center;
     gap: 10px;
-    margin-left: 20px;
+    margin-left: 15px;
 
     img {
       height: $logo-size;
@@ -120,11 +121,11 @@ nav {
     background: $light-grey-bg;
     padding: 0;
     margin: 0;
-    gap: 10px;
 
     li {
       text-align: center;
-      padding: 12px 0;
+      padding: 12px 10px;
+      font-weight: 400;
 
       a {
         text-decoration: none;
@@ -181,6 +182,7 @@ nav {
   // Mobile Devices (iPhone & Android) - Uniform View
   @media (max-width: 767px) {
     padding: 12px 15px;
+    gap: 30px;
 
     .menu-toggle {
       display: flex;
@@ -204,7 +206,12 @@ nav {
 
   // Tablets (iPads & Similar) - Uniform View
   @media (min-width: 768px) and (max-width: 1024px) {
-    padding: 15px 80px;
+    padding: 15px 50px;
+    gap: 40px;
+
+    .logo .logo-text{
+      font-size: 20px;
+    }
 
     .menu-toggle {
       display: none;
@@ -215,17 +222,18 @@ nav {
       flex-direction: row;
       position: static;
       width: auto;
-      gap: 25px;
+      gap: 20px;
     }
 
     .hire-me {
-      display: inline-block;
+      display: none;
     }
   }
 
-  // Laptops (13-inch & 15.6-inch) - Uniform Margins, Padding & Buttons Visible
+  // Laptops (13-inch & 15.6-inch) 
   @media (min-width: 1025px) {
-    padding: 15px 150px;
+    padding: 10px 10px 10px 200px;
+    
 
     .menu-toggle {
       display: none;
@@ -235,8 +243,9 @@ nav {
       display: flex;
       flex-direction: row;
       position: static;
+      margin-left: 70px;
       width: auto;
-      gap: 30px;
+      gap: 20px;
     }
 
     .hire-me {
@@ -245,29 +254,33 @@ nav {
   }
 }
 
+
 /*----------------------------- Home section starts Here-----------------------------*/
 .home {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 5%;
   background: $light-grey-bg;
+  padding-top: 30px;
   box-sizing: border-box;
-  flex-wrap: wrap;
-  justify-content: space-between;
   position: relative;
+
+  .home-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-inline: 70px;
+  }
 
   .home-content {
     flex: 1;
+    width: 40%;
     text-align: left;
-    width: 50%;
     padding-left: 100px;
 
     h1 {
       font-family: $font-heading;
-      font-size: 48px;
+      font-size: 42px;  
       font-weight: 700;
-      line-height: 50px;
+      line-height: 48px;
     }
 
     h2 {
@@ -284,35 +297,65 @@ nav {
       line-height: 16px;
     }
 
-    .btn {
-      @include button-style($primary-color, $hover-gradient);
-      margin: 10px 0;
+    .home-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
 
-      &.dark {
-        @include button-style($dark-blue, black);
+      .btn {
+        @include button-style($primary-color, $hover-gradient);
+        margin: 5px;
+
+        &.dark {
+          @include button-style($dark-blue, black);
+        }
+      }
+    }
+
+    .social-media {
+      margin-top: 40px;
+
+      p {
+        font-family: $font-body;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 16px;
+        margin-bottom: 10px;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 15px;
+
+        a img {
+          border-radius: 5px;
+          width: 30px;
+          height: 30px;
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
       }
     }
   }
 
   .home-image-container {
+    flex: 1;
+    width: 60%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 50%;
-    flex: 1;
 
     .home-image {
-      text-align: center;
-      margin: 20px;
       width: 100%;
-      max-width: 362px;
-      height: auto;
+      max-width: 450px;
+      text-align: center;
 
       img {
         width: 100%;
         height: auto;
         border-radius: 8px;
-        max-height: 400px;
       }
     }
   }
@@ -325,7 +368,6 @@ nav {
     height: 100%;
     display: flex;
     align-items: center;
-    z-index: 1;
 
     img {
       max-height: 300px;
@@ -333,164 +375,90 @@ nav {
     }
   }
 
-  // Tablet & Mobile View Adjustments
+  // 13.6 & 15.6 Inch Laptops 
+  @media (max-width: 1600px) {
+    .home-wrapper {
+      margin-inline: 130px;
+      padding-top: 25px;
+      padding-bottom: 0px;
+    }
+    .home-content {
+      width: 42%;
+      padding-left: 80px;
+    }
+    .home-image-container {
+      width: 58%;
+    }
+  }
+
+  // Tablets 
   @media (max-width: 1024px) {
-    flex-direction: row;
-    padding: 5%;
-    margin-bottom: 10%;
+    .home-wrapper {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
 
     .home-content {
-      width: 90%;
-      padding-left: 100px;
+      width: 50%;
+      padding-left: 5px;
       text-align: left;
+    }
 
-      h1 {
-        font-size: 2.0rem;
+    .home-image-container {
+      width: 50%;
+      text-align: right;
+    }
+  }
+
+  // Mobile Screens 
+  @media (max-width: 768px) {
+    .home-wrapper {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-inline: 20px;  
+    }
+
+    .home-content {
+      width: 100%;
+      order: 2;
+      padding: auto; 
+
+      h2{
+        margin: 5px;
       }
 
-      p {
-        font-size: 1.3rem;
+      h1 {
+        font-size: 32px;  
+        line-height: 40px;
+        margin-top:10px;
+      }
+      p{
+        margin-top:5px;
+      }
+      .social-icons{
+        justify-content: left;
       }
     }
 
     .home-image-container {
-      width: 70%;
-      order: -1;
-      margin: 20px auto;
+      width: 100%;
+      order: 1;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 20px;
+    }
 
-      .home-image {
-        max-width: 320px;
-        max-height: 380px;
-      }
+    .home-image img {
+      max-width: 80%;
     }
 
     .home-dots {
-      display: none;
-    }
-
-    // Fixing left alignment of social icons
-    .social-media {
-      .social-icons {
-        justify-content: flex-start;
-        margin-left: 0px;
-      }
-    }
-  }
-
-  // Mobile View (iPhone & Android - Same Layout)
-  @media (max-width: 768px) {
-    flex-direction: column; 
-    align-items: center;
-    text-align: center;
-    padding: 5%;
-
-    .home-image-container {
-      width: 80%;
-      order: -1; 
-      margin: 20px auto;
-
-      .home-image {
-        max-width: 280px;
-        max-height: 340px;
-      }
-    }
-
-    .home-content {
-      width: 90%;
-      order: 1; 
-      padding-left: 0; 
-      text-align: center;
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1.2rem;
-      }
-    }
-  }
-
-  // Smallest Mobile Screens
-  @media (max-width: 480px) {
-    .home-image-container {
-      width: 85%;
-      order: -1;
-      margin: 15px;
-
-      .home-image {
-        max-width: 260px;
-        max-height: 320px;
-      }
-    }
-
-    .home-content {
-      width: 90%;
-      order: 1;
-      text-align: center;
-
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
+      display: none; 
     }
   }
 }
-
-// Social Media Section
-.social-media {
-  margin-top: 40px;
-
-  p {
-    font-family: $font-body;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 16px;
-    margin-bottom: 10px;
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: left;
-    margin-left: 0px;
-    gap: 15px;
-
-    a img {
-      border-radius: 5px;
-      width: 30px;
-      height: 30px;
-      transition: transform 0.3s ease-in-out;
-
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
-  }
-
-  @media (max-width: 1024px) {
-    .social-icons {
-      margin-left: 100px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    margin-top: 20px;
-
-    p {
-      text-align: center;
-    }
-
-    .social-icons {
-      text-align: center;
-      padding-left:85px;
-    }
-  }
-}
-
-
 
 /*----------------------------- About Me section starts Here-----------------------------*/
 .about-me-container {
@@ -565,7 +533,7 @@ nav {
 
 .content-section {
   flex: 1;
-  padding: 20px;
+  padding: 65px;
   background-color: $light-bg;
   box-sizing: border-box;
   border-radius: 8px;
@@ -606,7 +574,7 @@ nav {
   }
 }
 
-// ✅ **Tablet View - Image and Content in Same Row**
+// Tablet View
 @media (max-width: 1024px) {
   .about-me-content {
     width: 95%;
@@ -617,15 +585,19 @@ nav {
   }
 
   .image-section {
-    width: 40%; 
-    max-width: 380px; 
     margin-left: 0;
+    margin-right: 10px;
     margin-top: 0; 
   }
 
   .content-section {
     width: 55%; 
-    padding: 20px;
+    padding: 40px;
+   header {
+    h3{
+    font-size: 32px;
+   }
+  }
   }
 
   .about-me-dots {
@@ -633,11 +605,10 @@ nav {
   }
 }
 
-// ✅ **Mobile View - Stack Image Above Content**
+// Mobile View
 @media (max-width: 768px) {
   .image-section {
-    width: 100% !important;
-    margin: 0 auto;
+   display: none;
   }
 
   .about-me-container {
@@ -704,7 +675,7 @@ nav {
 }
 
 .container {
-  max-width:1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   padding-left: 50px;
@@ -741,32 +712,41 @@ nav {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-}
 
-/* Common Category Styling */
-.category {
-  margin: 5px;
-  flex: 1 1 30%;
-  text-align: center;
-  margin-bottom: 3px;
+  .category {
+    margin: 5px;
+    flex: 1 1 30%;
+    text-align: center;
+    margin-bottom: 3px;
+  }
 
-  h3 {
-    font-family: Rockwell;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: left;
+  @media (max-width: 1600px) {
+    .category {
+      flex: 1 1 30%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .category {
+      flex: 1 1 30%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .category {
+      flex: 1 1 30%;
+    }
   }
 }
 
-/* Education Section */
 .edu-entry,
 .exp-entry,
 .skills-entry {
-  background-color:#fffdfd;
+  background-color: #fffdfd;
   border: 1px solid $light-bg;
   border-radius: 8px;
   padding: 20px;
+  padding-right: 5px;
   margin-bottom: 10px;
   box-sizing: border-box;
   width: 100%;
@@ -778,10 +758,11 @@ nav {
   margin-top: 10px;
 }
 
-.edu-entry,.exp-content h4 {
- font-family: Rockwell;
+.edu-entry, .exp-content h4 {
+  font-family: Rockwell;
 }
-.edu-entry p,h4{
+
+.edu-entry p, h4 {
   margin: 5px;
 }
 
@@ -792,7 +773,7 @@ nav {
 }
 
 .skills-entry {
-  font-family: Rockwell,sans-serif;
+  font-family: Rockwell, sans-serif;
   padding-bottom: 8px;
   padding-left: 25px;
 }
@@ -830,7 +811,7 @@ nav {
 }
 
 .exp-company {
-  color:$primary-color;
+  color: $primary-color;
   font-weight: bold;
 }
 
@@ -839,7 +820,7 @@ nav {
 }
 
 .highlight {
-  color:$primary-color
+  color: $primary-color;
 }
 
 .custom-label {
@@ -847,7 +828,6 @@ nav {
   font-size: 16px;
 }
 
-/* Hover Effects */
 .exp-entry:hover,
 .skills-entry:hover,
 .edu-entry:hover {
@@ -857,24 +837,33 @@ nav {
   cursor: pointer;
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-  .category {
-    flex: 1 1 45%;
+@media (max-width: 1600px) {
+  .content .category {
+    flex: 1 1 30%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content .category {
+    flex: 1 1 30%;
   }
 }
 
 @media (max-width: 768px) {
-  .category {
-    flex: 1 1 100%;
+  .content .category {
+    flex: 1 1 30%;
   }
-}
-
-@media (max-width: 480px) {
   .section-title h1 {
     font-size: 24px;
   }
+  .section-title h3 {
+    font-size: 20px;
+  }
+  .skills-list {
+    padding-left: 20px;
+  }
 }
+
 
 /*----------------------------- Services section starts Here----------------------------------------------------------------*/
 .services-section {
@@ -1622,7 +1611,7 @@ nav {
 
 //----------------------------------------------------------------Footer Section Start Here --------------------------------------------------------------//
 .footer {
-  background: rgba(43, 35, 68, 1);
+  background:$dark-color;
   color: white;
   padding-left: 0px;
   padding-bottom: 0px;
@@ -1725,7 +1714,7 @@ nav {
 }
 
 
-//----------------------------------------------------------------Move to Topm Buitton  --------------------------------------------------------------//
+//----------------------------------------------------------------Scroll to Topm Buitton  --------------------------------------------------------------//
 #scrollTopBtn {
   position: fixed;
   bottom: 30px;
