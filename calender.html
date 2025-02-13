@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar Layout</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            text-align: center;
+            margin: auto;
+            max-width: 1000px;
+        }
+
+        .day,
+        .date {
+            padding: 15px;
+            border: 1px solid black;
+        }
+
+        .day {
+            font-weight: bold;
+            background-color: lightblue;
+        }
+
+        .date {
+            background-color: grey;
+            font-weight: 700;
+            color: white;
+        }
+
+        /* Calender section ends here */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 60px);
+            grid-template-rows: repeat(5, 60px);
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .box {
+            background-color: grey;
+            color: white;
+            font-weight: 700;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        .box:nth-child(1) {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        .box:nth-child(2) {
+            grid-row: 1;
+            grid-column: 2;
+        }
+
+        .box:nth-child(3) {
+            grid-row: 1;
+            grid-column: 3;
+        }
+
+        .box:nth-child(4) {
+            grid-row: 1;
+            grid-column: 4;
+        }
+
+        .box:nth-child(5) {
+            grid-row: 1;
+            grid-column: 5;
+        }
+
+        .box:nth-child(6) {
+            grid-row: 2;
+            grid-column: 5;
+        }
+
+        .box:nth-child(7) {
+            grid-row: 3;
+            grid-column: 5;
+        }
+
+        .box:nth-child(8) {
+            grid-row: 4;
+            grid-column: 5;
+        }
+
+        .box:nth-child(9) {
+            grid-row: 5;
+            grid-column: 5;
+        }
+
+        .box:nth-child(10) {
+            grid-row: 5;
+            grid-column: 4;
+        }
+
+        .box:nth-child(11) {
+            grid-row: 5;
+            grid-column: 3;
+        }
+
+        .box:nth-child(12) {
+            grid-row: 5;
+            grid-column: 2;
+        }
+
+        .box:nth-child(13) {
+            grid-row: 5;
+            grid-column: 1;
+        }
+
+        .box:nth-child(14) {
+            grid-row: 4;
+            grid-column: 1;
+        }
+
+        .box:nth-child(15) {
+            grid-row: 3;
+            grid-column: 1;
+        }
+
+        .box:nth-child(16) {
+            grid-row: 2;
+            grid-column: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calender Design using Grid</h1>
+    <div class="calendar">
+        <!-- Days of the Week -->
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+        <div class="day">Fri</div>
+        <div class="day">Sat</div>
+        <div class="day">Sun</div>
+
+        <!-- Empty Boxes Before 1st -->
+        <div class="date"></div>
+        <div class="date"></div>
+
+        <!-- Days 1 to 31 -->
+        <div class="date">1</div>
+        <div class="date">2</div>
+        <div class="date">3</div>
+        <div class="date">4</div>
+        <div class="date">5</div>
+        <div class="date">6</div>
+        <div class="date">7</div>
+        <div class="date">8</div>
+        <div class="date">9</div>
+        <div class="date">10</div>
+        <div class="date">11</div>
+        <div class="date">12</div>
+        <div class="date">13</div>
+        <div class="date">14</div>
+        <div class="date">15</div>
+        <div class="date">16</div>
+        <div class="date">17</div>
+        <div class="date">18</div>
+        <div class="date">19</div>
+        <div class="date">20</div>
+        <div class="date">21</div>
+        <div class="date">22</div>
+        <div class="date">23</div>
+        <div class="date">24</div>
+        <div class="date">25</div>
+        <div class="date">26</div>
+        <div class="date">27</div>
+        <div class="date">28</div>
+        <div class="date">29</div>
+        <div class="date">30</div>
+        <div class="date">31</div>
+    </div>
+    <br /><br /><br />
+
+    <!-- Box Design Starts Here -->
+    <h1>Box design using Grid</h1>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box">13</div>
+        <div class="box">14</div>
+        <div class="box">15</div>
+        <div class="box">16</div>
+    </div>
+</body>
+
+</html>
